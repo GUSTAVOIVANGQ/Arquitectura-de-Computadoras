@@ -1,0 +1,23 @@
+|ROM_16x8
+clk => dato_leido[0].CLK
+clk => dato_leido[1].CLK
+clk => dato_leido[2].CLK
+clk => dato_leido[3].CLK
+clk => dato_leido[4].CLK
+clk => dato_leido[5].CLK
+clk => dato_leido[6].CLK
+clk => dato_leido[7].CLK
+addr[0] => memoria_rom.RADDR
+addr[1] => memoria_rom.RADDR1
+addr[2] => memoria_rom.RADDR2
+addr[3] => memoria_rom.RADDR3
+data_out[0] << dato_leido[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] << dato_leido[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] << dato_leido[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] << dato_leido[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] << dato_leido[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] << dato_leido[5].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] << dato_leido[6].DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] << dato_leido[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

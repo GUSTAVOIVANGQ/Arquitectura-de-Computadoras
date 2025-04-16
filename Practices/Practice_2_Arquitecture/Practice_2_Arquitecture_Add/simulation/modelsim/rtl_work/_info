@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_2_Arquitecture_Add\simulation\modelsim
+Ecla_4bit
+Z1 w1744753371
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_2_Arquitecture_Add\simulation\modelsim
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_4bit.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_4bit.vhd
+l0
+L4
+V_zF]^_H^KZo0:HB9K0OX?1
+!s100 Gfk=MSQ7>5bG<W9D?9:i<0
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1744756057.162000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_4bit.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_4bit.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Astructural
+R2
+R3
+DEx4 work 8 cla_4bit 0 22 _zF]^_H^KZo0:HB9K0OX?1
+l36
+L14
+V1?iY@B0P`L95RY=d4i8Wd3
+!s100 _2K5B?nX^jDVc6Az7eRa@0
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Ecla_logic
+Z13 w1744753610
+R2
+R3
+R4
+Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_logic.vhd
+Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_logic.vhd
+l0
+L4
+Vj?g;N`Y1WofS_OQ?WT_Nj3
+R7
+31
+Z16 !s108 1744756056.996000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_logic.vhd|
+Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_logic.vhd|
+R11
+R12
+!s100 z1c^Q?YkfC0egT4mmOL7C2
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 9 cla_logic 0 22 j?g;N`Y1WofS_OQ?WT_Nj3
+l15
+L14
+VXa:eaUjHK5h=CVPT0c8B03
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 ^P8GbS:]F2X^z5KJ7QAU92
+!i10b 1
+Epfa
+Z19 w1744753327
+R2
+R3
+R4
+Z20 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/pfa.vhd
+Z21 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/pfa.vhd
+l0
+L4
+VPinglQAj3CNjCi^ka^=M62
+R7
+31
+Z22 !s108 1744756056.813000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/pfa.vhd|
+Z24 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/pfa.vhd|
+R11
+R12
+!s100 lbPW7d6Y[Abk4k821M17P3
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 3 pfa 0 22 PinglQAj3CNjCi^ka^=M62
+l16
+L15
+V^GK]^jKU?HMnVX9l87A_V3
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 1n`8caDn?CQ0TVYGDB=mS2
+!i10b 1

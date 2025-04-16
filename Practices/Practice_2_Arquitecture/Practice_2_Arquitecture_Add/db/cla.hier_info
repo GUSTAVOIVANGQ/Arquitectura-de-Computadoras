@@ -1,0 +1,105 @@
+|cla_4bit
+a[0] => pfa:GEN_PFA:0:PFA_X.a
+a[1] => pfa:GEN_PFA:1:PFA_X.a
+a[2] => pfa:GEN_PFA:2:PFA_X.a
+a[3] => pfa:GEN_PFA:3:PFA_X.a
+b[0] => pfa:GEN_PFA:0:PFA_X.b
+b[1] => pfa:GEN_PFA:1:PFA_X.b
+b[2] => pfa:GEN_PFA:2:PFA_X.b
+b[3] => pfa:GEN_PFA:3:PFA_X.b
+cin => cla_logic:CLA.cin
+cin => pfa:GEN_PFA:0:PFA_X.cin
+sum[0] << pfa:GEN_PFA:0:PFA_X.s
+sum[1] << pfa:GEN_PFA:1:PFA_X.s
+sum[2] << pfa:GEN_PFA:2:PFA_X.s
+sum[3] << pfa:GEN_PFA:3:PFA_X.s
+cout << cla_logic:CLA.cout
+
+
+|cla_4bit|pfa:\GEN_PFA:0:PFA_X
+a => s.IN0
+a => p.IN0
+a => g.IN0
+b => s.IN1
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cla_4bit|pfa:\GEN_PFA:1:PFA_X
+a => s.IN0
+a => p.IN0
+a => g.IN0
+b => s.IN1
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cla_4bit|pfa:\GEN_PFA:2:PFA_X
+a => s.IN0
+a => p.IN0
+a => g.IN0
+b => s.IN1
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cla_4bit|pfa:\GEN_PFA:3:PFA_X
+a => s.IN0
+a => p.IN0
+a => g.IN0
+b => s.IN1
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cla_4bit|cla_logic:CLA
+p[0] => c.IN0
+p[0] => c.IN0
+p[0] => c.IN1
+p[0] => c.IN1
+p[1] => c.IN0
+p[1] => c.IN1
+p[1] => c.IN0
+p[1] => c.IN1
+p[2] => c.IN0
+p[2] => c.IN1
+p[2] => c.IN0
+p[3] => c.IN0
+p[3] => c.IN1
+g[0] => c.IN1
+g[0] => c.IN1
+g[0] => c.IN1
+g[0] => c.IN1
+g[1] => c.IN1
+g[1] => c.IN1
+g[1] => c.IN1
+g[2] => c.IN1
+g[2] => c.IN1
+g[3] => c.IN1
+cin => c.IN1
+cin => c.IN1
+cin => c.IN1
+cin => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[3] <= c.DB_MAX_OUTPUT_PORT_TYPE
+cout <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

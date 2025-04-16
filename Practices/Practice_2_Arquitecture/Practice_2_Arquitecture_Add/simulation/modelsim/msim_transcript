@@ -1,0 +1,46 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do cla_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/pfa.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pfa
+# -- Compiling architecture Behavioral of pfa
+# vcom -93 -work work {C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_logic.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity cla_logic
+# -- Compiling architecture Behavioral of cla_logic
+# vcom -93 -work work {C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_2_Arquitecture_Add/cla_4bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity cla_4bit
+# -- Compiling architecture Structural of cla_4bit
+# 
+vsim -voptargs=+acc work.cla_4bit
+# vsim -voptargs=+acc work.cla_4bit 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cla_4bit(structural)
+# Loading work.pfa(behavioral)
+# Loading work.cla_logic(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /cla_4bit/CLA/cout has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 

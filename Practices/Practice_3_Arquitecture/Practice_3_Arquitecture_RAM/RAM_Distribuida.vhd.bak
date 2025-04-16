@@ -1,0 +1,61 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity RAM_Distribuida is
+Port (
+    clk      : in  STD_LOGIC;
+    reset    : in  STD_LOGIC;  -- Señal de reset añadida
+    we       : in  STD_LOGIC;
+    fila     : in  STD_LOGIC_VECTOR(9 downto 0);  -- 10 bits = 1024 filas
+    columna  : in  STD_LOGIC_VECTOR(3 downto 0);  -- 4 bits = 16 columnas
+    data_in  : in  STD_LOGIC_VECTOR(7 downto 0);
+    data_out : out STD_LOGIC_VECTOR(7 downto 0);
+    -- Señales para visualización en los LEDs
+    leds     : out STD_LOGIC_VECTOR(17 downto 0)  -- LEDs rojos y verdes
+);
+end RAM_Distribuida;
+
+architecture Behavioral of RAM_Distribuida is
+    type matriz_col is array (15 downto 0) of STD_LOGIC_VECTOR(7 downto 0);
+    type matriz_ram is array (0 to 1023) of matriz_col;
+    
+    signal memoria : matriz_ram := (
+        0 => (0 => x"AA", 1 => x"BB", others => x"00"),  -- Ejemplo de inicialización
+        others => (others => (others => '0'))
+    );
+    
+    attribute ram_style : string;
+    attribute ram_style of memoria : signal is "distributed";
+    
+    signal dato_leido : STD_LOGIC_VECTOR(7 downto 0);
+    signal reg_fila : STD_LOGIC_VECTOR(9 downto 0);
+    signal reg_columna : STD_LOGIC_VECTOR(3 downto 0);
+begin
+
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            dato_leido <= (others => '0');
+            reg_fila <= (others => '0');
+            reg_columna <= (others => '0');
+        elsif rising_edge(clk) then
+            if we = '1' then
+                memoria(to_integer(unsigned(fila)))(to_integer(unsigned(columna))) <= data_in;
+            end if;
+            
+            -- Registrar direcciones para visualización
+            reg_fila <= fila;
+            reg_columna <= columna;
+            
+            dato_leido <= memoria(to_integer(unsigned(fila)))(to_integer(unsigned(columna)));
+        end if;
+    end process;
+
+    data_out <= dato_leido;
+    
+    -- Visualización en LEDs (parte baja de la fila y columna actual)
+    leds(17 downto 8) <= reg_fila(9 downto 0) when unsigned(reg_fila) < 1024 else (others => '0');
+    leds(7 downto 0) <= dato_leido;
+    
+end Behavioral;

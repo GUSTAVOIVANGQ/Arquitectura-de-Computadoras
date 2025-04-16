@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity full_adder_4bit_tb is
+end full_adder_4bit_tb;
+
+architecture Behavioral of full_adder_4bit_tb is
+    component full_adder_4bit
+        Port (
+            a     : in  STD_LOGIC_VECTOR(3 downto 0);
+            b     : in  STD_LOGIC_VECTOR(3 downto 0);
+            cin   : in  STD_LOGIC;
+            sum   : out STD_LOGIC_VECTOR(3 downto 0);
+            cout  : out STD_LOGIC
+        );
+    end component;
+    
+    signal a, b, sum : STD_LOGIC_VECTOR(3 downto 0);
+    signal cin, cout : STD_LOGIC;
+    
+begin
+    UUT: full_adder_4bit port map (a, b, cin, sum, cout);
+    
+    process
+    begin
+        -- Test all combinations
+        for i in 0 to 15 loop
+            for j in 0 to 15 loop
+                for k in 0 to 1 loop
+                    a <= STD_LOGIC_VECTOR(to_unsigned(i, 4));
+                    b <= STD_LOGIC_VECTOR(to_unsigned(j, 4));
+                    cin <= '0' when k = 0 else '1';
+                    wait for 10 ns;
+                end loop;
+            end loop;
+        end loop;
+        wait;
+    end process;
+end Behavioral;
