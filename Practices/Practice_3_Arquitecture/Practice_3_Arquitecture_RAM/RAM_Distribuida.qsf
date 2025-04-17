@@ -55,81 +55,54 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE TB_RAM_Distribuida.vhd
 
-# Asignación de pines para la memoria RAM distribuida
-# Reloj de 50MHz de la placa
+# Reloj de 50MHz
 set_location_assignment PIN_Y2 -to clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 
-# Señal de escritura (WE) - Usar un interruptor
+# Señal de escritura (usar SW0)
 set_location_assignment PIN_AB28 -to we
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to we
 
-# Bus de dirección - fila (10 bits) - Usar interruptores
+# Dirección - fila (usar SW1-SW4)
 set_location_assignment PIN_AC28 -to fila[0]
 set_location_assignment PIN_AC27 -to fila[1]
 set_location_assignment PIN_AD27 -to fila[2]
 set_location_assignment PIN_AB27 -to fila[3]
-set_location_assignment PIN_AC26 -to fila[4]
-set_location_assignment PIN_AD26 -to fila[5]
-set_location_assignment PIN_AB26 -to fila[6]
-set_location_assignment PIN_AC25 -to fila[7]
-set_location_assignment PIN_AB25 -to fila[8]
-set_location_assignment PIN_AC24 -to fila[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fila[9]
 
-# Bus de dirección - columna (4 bits) - Usar interruptores
-set_location_assignment PIN_AB23 -to columna[0]
-set_location_assignment PIN_AA24 -to columna[1]
-set_location_assignment PIN_AA23 -to columna[2]
-set_location_assignment PIN_AA22 -to columna[3]
+# Dirección - columna (usar SW5-SW8)
+set_location_assignment PIN_AC26 -to columna[0]
+set_location_assignment PIN_AD26 -to columna[1]
+set_location_assignment PIN_AB26 -to columna[2]
+set_location_assignment PIN_AC25 -to columna[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to columna[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to columna[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to columna[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to columna[3]
 
-# Bus de datos de entrada (8 bits) - Usar interruptores
-set_location_assignment PIN_AA25 -to data_in[0]
-set_location_assignment PIN_AA26 -to data_in[1]
-set_location_assignment PIN_AB25 -to data_in[2]
-set_location_assignment PIN_AB26 -to data_in[3]
-set_location_assignment PIN_AB27 -to data_in[4]
-set_location_assignment PIN_AB28 -to data_in[5]
-set_location_assignment PIN_AC28 -to data_in[6]
-set_location_assignment PIN_AC27 -to data_in[7]
+# Datos de entrada (usar SW9-SW12)
+set_location_assignment PIN_AB25 -to data_in[0]
+set_location_assignment PIN_AC24 -to data_in[1]
+set_location_assignment PIN_AB24 -to data_in[2]
+set_location_assignment PIN_AB23 -to data_in[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[7]
 
-# Bus de datos de salida (8 bits) - Usar LEDs verdes
+# Datos de salida (usar LEDG0-LEDG3)
 set_location_assignment PIN_E21 -to data_out[0]
 set_location_assignment PIN_E22 -to data_out[1]
 set_location_assignment PIN_E25 -to data_out[2]
 set_location_assignment PIN_E24 -to data_out[3]
-set_location_assignment PIN_H21 -to data_out[4]
-set_location_assignment PIN_G20 -to data_out[5]
-set_location_assignment PIN_G22 -to data_out[6]
-set_location_assignment PIN_G21 -to data_out[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[7]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf

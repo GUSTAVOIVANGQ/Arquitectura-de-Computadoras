@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.1
+Eram_distribuida
+Z0 w1744777046
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_3_Arquitecture\Practice_3_Arquitecture_RAM
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/RAM_Distribuida.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/RAM_Distribuida.vhd
+l0
+L6
+V;LMXoZ4]3eW>C2lPJG1ni0
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1744838097.888000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/RAM_Distribuida.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/RAM_Distribuida.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 ;?:COCHbenYFChVXZaXCG2
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 15 ram_distribuida 0 22 ;LMXoZ4]3eW>C2lPJG1ni0
+l31
+L17
+VN_<L86KB9=8QD?5VO01Yg1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 onFo[ZcHP?g70Tm8KcY<g1
+!i10b 1
+Etb_ram_distribuida
+Z13 w1744777077
+R1
+R2
+R3
+R4
+Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/TB_RAM_Distribuida.vhd
+Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/TB_RAM_Distribuida.vhd
+l0
+L6
+V87EUgFhg;[J4R`74V@2fY2
+!s100 `QIBH;B`?ijemH4z61_?[3
+R7
+32
+!i10b 1
+Z16 !s108 1744838098.050000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/TB_RAM_Distribuida.vhd|
+Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_RAM/TB_RAM_Distribuida.vhd|
+R11
+R12
+Abehavioral
+R1
+R2
+R3
+DEx4 work 18 tb_ram_distribuida 0 22 87EUgFhg;[J4R`74V@2fY2
+l32
+L9
+VAYfXjcQI<Y9Dki5b48EW41
+!s100 z>?Y`lk9GYQhe=CG211ef3
+R7
+32
+!i10b 1
+R16
+R17
+R18
+R11
+R12
