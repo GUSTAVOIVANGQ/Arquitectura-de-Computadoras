@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_4_Arquitecture\simulation\modelsim
+Estack_8bit
+Z1 w1745965785
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_4_Arquitecture\simulation\modelsim
+Z6 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd
+Z7 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd
+l0
+L5
+VRnj6;fV;F>SGLP@fX<fH;0
+!s100 K_Ye;<_^<RcRBabV_gLmz1
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1746023871.406000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd|
+Z11 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 stack_8bit 0 22 Rnj6;fV;F>SGLP@fX<fH;0
+l28
+L23
+VgH@U@QPEKcneJb^c^`1o[0
+!s100 9;[i6_fP]6Z^C]EjEZmzY3
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13

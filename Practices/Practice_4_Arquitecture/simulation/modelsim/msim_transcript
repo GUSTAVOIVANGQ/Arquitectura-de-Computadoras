@@ -1,0 +1,62 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do stack_8bit_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stack_8bit
+# -- Compiling architecture behavioral of stack_8bit
+# 
+vsim -voptargs=+acc work.stack_8bit
+# vsim -voptargs=+acc work.stack_8bit 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.stack_8bit(behavioral)
+add wave -position insertpoint  \
+sim:/stack_8bit/WIDTH \
+sim:/stack_8bit/DEPTH \
+sim:/stack_8bit/clk \
+sim:/stack_8bit/reset \
+sim:/stack_8bit/push \
+sim:/stack_8bit/pop \
+sim:/stack_8bit/peek \
+sim:/stack_8bit/data_in \
+sim:/stack_8bit/data_out \
+sim:/stack_8bit/empty \
+sim:/stack_8bit/full \
+sim:/stack_8bit/stack \
+sim:/stack_8bit/stack_ptr \
+sim:/stack_8bit/empty_signal \
+sim:/stack_8bit/full_signal
+run
+run
+run
+run
+run -all
+# Break key hit 
+run
+run
+run
+run
+run
+run -all
+run -all
+run -all
+run -all
+run -all
+run -all
+# Break key hit 
