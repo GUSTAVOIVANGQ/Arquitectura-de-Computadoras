@@ -53,38 +53,26 @@ set_global_assignment -name VHDL_FILE stack_8bit.vhd
 set_global_assignment -name VHDL_FILE stack_tb.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 
-#============================================================
-# Clock Connections
-#============================================================
-set_location_assignment PIN_Y2 -to clk
+# Asignación de reloj (KEY[0])
+set_location_assignment PIN_M23 -to clk
 
-#============================================================
-# Reset Connections (KEY0)
-#============================================================
-set_location_assignment PIN_M23 -to reset
+# Asignación de señales de control (SW[0] a SW[3])
+set_location_assignment PIN_AB28 -to reset
+set_location_assignment PIN_AC28 -to push
+set_location_assignment PIN_AC27 -to pop
+set_location_assignment PIN_AD27 -to peek
 
-#============================================================
-# Control Buttons (KEY1, KEY2, KEY3)
-#============================================================
-set_location_assignment PIN_M21 -to push
-set_location_assignment PIN_N21 -to pop
-set_location_assignment PIN_R24 -to peek
+# Asignación de entrada de datos (SW[4] a SW[11])
+set_location_assignment PIN_AB27 -to data_in[0]
+set_location_assignment PIN_AC26 -to data_in[1]
+set_location_assignment PIN_AD26 -to data_in[2]
+set_location_assignment PIN_AB26 -to data_in[3]
+set_location_assignment PIN_AC25 -to data_in[4]
+set_location_assignment PIN_AB25 -to data_in[5]
+set_location_assignment PIN_AC24 -to data_in[6]
+set_location_assignment PIN_AB24 -to data_in[7]
 
-#============================================================
-# Data Input (8-bit from SW7-SW0)
-#============================================================
-set_location_assignment PIN_AB28 -to data_in[0]
-set_location_assignment PIN_AC28 -to data_in[1]
-set_location_assignment PIN_AC27 -to data_in[2]
-set_location_assignment PIN_AD27 -to data_in[3]
-set_location_assignment PIN_AB27 -to data_in[4]
-set_location_assignment PIN_AC26 -to data_in[5]
-set_location_assignment PIN_AD26 -to data_in[6]
-set_location_assignment PIN_AB26 -to data_in[7]
-
-#============================================================
-# Data Output (8-bit to LEDR7-LEDR0)
-#============================================================
+# Asignación de salida de datos (LEDR[0] a LEDR[7])
 set_location_assignment PIN_G19 -to data_out[0]
 set_location_assignment PIN_F19 -to data_out[1]
 set_location_assignment PIN_E19 -to data_out[2]
@@ -94,33 +82,11 @@ set_location_assignment PIN_E18 -to data_out[5]
 set_location_assignment PIN_J19 -to data_out[6]
 set_location_assignment PIN_H19 -to data_out[7]
 
-#============================================================
-# Status Indicators (LEDG0 and LEDG1)
-#============================================================
-set_location_assignment PIN_E21 -to empty
-set_location_assignment PIN_E22 -to full
-
-#============================================================
-# Configuración de botones (Pull-Up resistors)
-#============================================================
+# Asignación de indicadores de estado (LEDG[0] y LEDG[1])
+set_location_assignment PIN_E21 -to full
+set_location_assignment PIN_E22 -to empty
 
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to push
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pop
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to peek
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[*]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[*]
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to data_out[*]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to empty
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to full
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to empty
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to full
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to push
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to pop
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to peek
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to reset
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_3_Arquitecture
 Estack_8bit
-Z0 w1745965785
+Z0 w1746145105
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -13,25 +13,24 @@ Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practi
 Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd
 l0
 L5
-VNjYEllbUXllIV[[_5mEA`0
+V;T0@g8`bhO>aPkL6oL;W[3
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1746024993.207000
+Z8 !s108 1746145801.115000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd|
 Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit.vhd|
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
-!s100 K_Ye;<_^<RcRBabV_gLmz1
+!s100 @@RkQjRgkLn@58=Fng?Kb0
 !i10b 1
 Abehavioral
 R1
 R2
 R3
-DEx4 work 10 stack_8bit 0 22 NjYEllbUXllIV[[_5mEA`0
-l28
-L23
-V_0fXHn^b3:5kgXbcW8oUZ2
-!s100 9;[i6_fP]6Z^C]EjEZmzY3
+DEx4 work 10 stack_8bit 0 22 ;T0@g8`bhO>aPkL6oL;W[3
+l23
+L19
+VoN2dQLK9OmY?oa>E7FmV?1
 R7
 32
 R8
@@ -39,36 +38,37 @@ R9
 R10
 R11
 R12
+!s100 EYajZ=ol9jgSnmX;D=f6h0
 !i10b 1
-Estack_tb
-Z13 w1746024981
+Estack_8bit_tb
+Z13 w1746145522
 R1
 R2
 R3
 R4
-Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd
-Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd
+Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit_tb.vhd
+Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit_tb.vhd
 l0
 L5
-VY2SPLI;Yo78Jn;g`C?PAB2
-!s100 O7^jEm37WRefLH?XDTI@Z2
+VeC8c=Bc00OzMmmhfDZL>f3
+!s100 ?3T:QWb<8ol@2Zf^nVb[K0
 R7
 32
 !i10b 1
-Z16 !s108 1746024993.380000
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd|
-Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd|
+Z16 !s108 1746145801.293000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit_tb.vhd|
+Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_8bit_tb.vhd|
 R11
 R12
-Atest
+Abehavioral
 R1
 R2
 R3
-DEx4 work 8 stack_tb 0 22 Y2SPLI;Yo78Jn;g`C?PAB2
+DEx4 work 13 stack_8bit_tb 0 22 eC8c=Bc00OzMmmhfDZL>f3
 l35
 L8
-V640f>nia1;]731RJcdkP<3
-!s100 6>7bl;UHEWUTdR_711EJ:1
+VMGLA`K@>D6Ij>zA_a^0@c0
+!s100 BKfU7fCgoZ>bQdENQRE<X1
 R7
 32
 !i10b 1
@@ -77,3 +77,40 @@ R17
 R18
 R11
 R12
+Estack_tb
+Z19 w1746024981
+R1
+R2
+R3
+R4
+Z20 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd
+Z21 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd
+l0
+L5
+VY2SPLI;Yo78Jn;g`C?PAB2
+R7
+32
+Z22 !s108 1746024993.380000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd|
+Z24 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_4_Arquitecture/stack_tb.vhd|
+R11
+R12
+!s100 O7^jEm37WRefLH?XDTI@Z2
+!i10b 1
+Atest
+R1
+R2
+R3
+DEx4 work 8 stack_tb 0 22 Y2SPLI;Yo78Jn;g`C?PAB2
+l35
+L8
+V640f>nia1;]731RJcdkP<3
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 6>7bl;UHEWUTdR_711EJ:1
+!i10b 1
