@@ -1,0 +1,63 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity RegisterFile_Top is
+    Port (
+        CLOCK_50    : in  std_logic;
+        SW          : in  std_logic_vector(17 downto 0);
+        KEY         : in  std_logic_vector(3 downto 0);
+        LEDR        : out std_logic_vector(17 downto 0);
+        LEDG        : out std_logic_vector(8 downto 0)
+    );
+end RegisterFile_Top;
+
+architecture Behavioral of RegisterFile_Top is
+    component RegisterFile
+        Port (
+            clk      : in  std_logic;
+            we       : in  std_logic;
+            wr_addr  : in  std_logic_vector(2 downto 0);
+            rd_addr1 : in  std_logic_vector(2 downto 0);
+            rd_addr2 : in  std_logic_vector(2 downto 0);
+            wr_data  : in  std_logic_vector(7 downto 0);
+            rd_data1 : out std_logic_vector(7 downto 0);
+            rd_data2 : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    signal we       : std_logic;
+    signal wr_addr  : std_logic_vector(2 downto 0);
+    signal rd_addr1 : std_logic_vector(2 downto 0);
+    signal rd_addr2 : std_logic_vector(2 downto 0);
+    signal wr_data  : std_logic_vector(7 downto 0);
+    signal rd_data1 : std_logic_vector(7 downto 0);
+    signal rd_data2 : std_logic_vector(7 downto 0);
+    
+begin
+    -- Conexión del archivo de registros
+    RF: RegisterFile port map (
+        clk      => CLOCK_50,
+        we       => we,
+        wr_addr  => wr_addr,
+        rd_addr1 => rd_addr1,
+        rd_addr2 => rd_addr2,
+        wr_data  => wr_data,
+        rd_data1 => rd_data1,
+        rd_data2 => rd_data2
+    );
+    
+    -- Asignación de entradas desde los switches y botones
+    we      <= not KEY(0);  -- Usar KEY0 como write enable (activo bajo)
+    wr_addr <= SW(17 downto 15);  -- Switches 17-15 para dirección de escritura
+    rd_addr1 <= SW(14 downto 12); -- Switches 14-12 para dirección de lectura 1
+    rd_addr2 <= SW(11 downto 9);  -- Switches 11-9 para dirección de lectura 2
+    wr_data <= SW(7 downto 0);    -- Switches 7-0 para dato a escribir
+    
+    -- Visualización de resultados en LEDs y displays
+    LEDR(7 downto 0) <= rd_data1;  -- Mostrar rd_data1 en LEDs rojos
+    LEDG(7 downto 0) <= rd_data2;  -- Mostrar rd_data2 en LEDs verdes
+    
+    -- Opcional: Mostrar valores en displays hexadecimales
+    -- (Necesitarías añadir un componente de conversión a 7 segmentos)
+end Behavioral;
