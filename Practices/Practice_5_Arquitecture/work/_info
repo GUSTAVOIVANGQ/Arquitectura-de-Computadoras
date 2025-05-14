@@ -16,7 +16,7 @@ L5
 VzlWezCnMSCRRQOgD641fR1
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1746809931.749000
+Z8 !s108 1747156231.914000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd|
 Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -53,7 +53,7 @@ L5
 V]5W71P=KiY8=cGYA8Iz:P0
 R7
 32
-Z16 !s108 1746809931.941000
+Z16 !s108 1747156232.096000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_tb.vhd|
 Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_tb.vhd|
 R11
@@ -68,6 +68,7 @@ DEx4 work 15 registerfile_tb 0 22 ]5W71P=KiY8=cGYA8Iz:P0
 l33
 L8
 VHDAWgn?72;C8[6J4ngZg@2
+!s100 G`n]l]JjWf^JB^VVb:HL<2
 R7
 32
 R16
@@ -75,10 +76,9 @@ R17
 R18
 R11
 R12
-!s100 G`n]l]JjWf^JB^VVb:HL<2
 !i10b 1
 Eregisterfile_top
-Z19 w1746809133
+Z19 w1746810435
 R1
 R2
 R3
@@ -87,12 +87,12 @@ Z20 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Pract
 Z21 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_Top.vhd
 l0
 L5
-VGn`Hf9`OeALH1`iRo605A3
-!s100 4cMUcz]BJ<77CHiK_0zQA2
+V>ggo;J6C92YaLz4h@@9hA0
+!s100 8hOJFaIQAP<78`bG:G?Wh3
 R7
 32
 !i10b 1
-Z22 !s108 1746809932.076000
+Z22 !s108 1747156232.233000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_Top.vhd|
 Z24 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_Top.vhd|
 R11
@@ -101,11 +101,11 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 16 registerfile_top 0 22 Gn`Hf9`OeALH1`iRo605A3
-l39
-L17
-Vc[V@GDM9Kge_006:oKQLR3
-!s100 mo;TDIYhkbRJVi<UQY[DU3
+DEx4 work 16 registerfile_top 0 22 >ggo;J6C92YaLz4h@@9hA0
+l37
+L15
+Z25 Vc[V@GDM9Kge_006:oKQLR3
+!s100 <]><YQcAD>D8_^?ZfYA[G2
 R7
 32
 !i10b 1
