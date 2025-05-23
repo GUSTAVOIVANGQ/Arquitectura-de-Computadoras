@@ -1,5 +1,5 @@
 Flow report for RegisterFile
-Tue May 13 09:15:10 2025
+Tue May 20 12:34:01 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue May 13 09:15:10 2025      ;
+; Flow Status                        ; Successful - Tue May 20 12:34:01 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RegisterFile                               ;
 ; Top-level Entity Name              ; RegisterFile_Top                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/13/2025 09:14:27 ;
+; Start date & time ; 05/20/2025 12:33:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RegisterFile        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+------------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name      ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589199.174714926716528        ; --            ; --               ; --             ;
+; COMPILER_SIGNATURE_ID               ; 10995770589198.174776599722604        ; --            ; --               ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --               ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --               ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --               ; --             ;
@@ -97,11 +97,11 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4646 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 5135 MB             ; 00:00:16                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 4600 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4684 MB             ; 00:00:05                           ;
+; Fitter                    ; 00:00:21     ; 1.0                     ; 5134 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 4600 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4680 MB             ; 00:00:04                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4543 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:34                           ;
+; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -58,12 +58,12 @@ begin
         -- Escritura en registro 0
         we <= '1';
         wr_addr <= "000";
-        wr_data <= "10101010";
+        wr_data <= "00000010";
         wait for clk_period;
         
         -- Escritura en registro 5
         wr_addr <= "101";
-        wr_data <= "11001100";
+        wr_data <= "00000100";
         wait for clk_period;
         
         we <= '0';

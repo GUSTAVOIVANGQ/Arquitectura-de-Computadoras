@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "05/13/2025 09:15:09"
+-- DATE "05/20/2025 12:34:01"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -38,8 +38,8 @@ ENTITY 	RegisterFile_Top IS
 	CLOCK_50 : IN std_logic;
 	SW : IN std_logic_vector(17 DOWNTO 0);
 	KEY : IN std_logic_vector(3 DOWNTO 0);
-	LEDR : OUT std_logic_vector(17 DOWNTO 0);
-	LEDG : OUT std_logic_vector(8 DOWNTO 0)
+	LEDR : BUFFER std_logic_vector(17 DOWNTO 0);
+	LEDG : BUFFER std_logic_vector(8 DOWNTO 0)
 	);
 END RegisterFile_Top;
 
