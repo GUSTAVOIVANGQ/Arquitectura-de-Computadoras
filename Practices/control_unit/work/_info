@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.1
+Econtrol_unit
+Z0 w1749656439
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\control_unit
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/control_unit.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/control_unit.vhd
+l0
+L6
+V`VHfJ?DTLMmh24]Q?nl_02
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1749849120.199000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/control_unit.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/control_unit.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 `@QXZ:hA`3YGoGNN9Kilc0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 12 control_unit 0 22 `VHfJ?DTLMmh24]Q?nl_02
+l42
+L20
+VXWmnbVQkPP;f^90?g:RS^1
+!s100 YA<Wbc]a1;_n;><0TjcZY0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+Etb_control_unit
+Z13 w1749835500
+Z14 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R1
+R2
+R3
+R4
+Z15 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/tb_control_unit.vhd
+Z16 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/tb_control_unit.vhd
+l0
+L7
+VIE^Ne9V?aV@6HG:UMNUN[2
+!s100 NFA91:LmQObbdHUFN7`NJ2
+R7
+32
+!i10b 1
+Z17 !s108 1749849120.352000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/tb_control_unit.vhd|
+Z19 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/control_unit/tb_control_unit.vhd|
+R11
+R12
+Abehavioral
+R14
+R1
+R2
+R3
+Z20 DEx4 work 15 tb_control_unit 0 22 IE^Ne9V?aV@6HG:UMNUN[2
+l47
+L10
+V52MF?k@2eBToQHai77h`E1
+!s100 =GaZcF;9jc[163SUD7:Km1
+R7
+32
+!i10b 1
+R17
+R18
+R19
+R11
+R12

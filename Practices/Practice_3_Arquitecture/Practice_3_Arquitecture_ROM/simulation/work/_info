@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_3_Arquitecture\Practice_3_Arquitecture_RAM\simulation
+Erom_16x8
+Z0 w1744778672
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_3_Arquitecture\Practice_3_Arquitecture_ROM\simulation
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/ROM_16x8.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/ROM_16x8.vhd
+l0
+L6
+V>D1lkBm_JjCP_PJJFRfnz1
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1748041521.481000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/ROM_16x8.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/ROM_16x8.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 Q2dC[B4C0@hXiAGDQRNKk2
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 8 rom_16x8 0 22 >D1lkBm_JjCP_PJJFRfnz1
+l43
+L14
+VkKL:G6akQzJm_I^EAnUWV1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 AKnC4?f_1>]M2WKm7l?7^3
+!i10b 1
+Etb_rom_16x8
+Z13 w1744778700
+R1
+R2
+R3
+R4
+Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/TB_ROM_16x8.vhd
+Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/TB_ROM_16x8.vhd
+l0
+L6
+VGliA4j:]jCg=hR`HRBff60
+!s100 2Dz>HnG_@^D6=7EN1QM=g1
+R7
+32
+!i10b 1
+Z16 !s108 1748041521.658000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/TB_ROM_16x8.vhd|
+Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_3_Arquitecture/Practice_3_Arquitecture_ROM/TB_ROM_16x8.vhd|
+R11
+R12
+Abehavioral
+R1
+R2
+R3
+DEx4 work 11 tb_rom_16x8 0 22 GliA4j:]jCg=hR`HRBff60
+l23
+L9
+VkUUzXPQa<:Zf2:B;M:Pz>2
+!s100 JWWOAb_:T:T`SiafE^GmQ1
+R7
+32
+!i10b 1
+R16
+R17
+R18
+R11
+R12

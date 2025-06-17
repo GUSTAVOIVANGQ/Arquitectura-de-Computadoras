@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_4_Arquitecture\work
 Eregisterfile
-Z0 w1746809107
+Z0 w1747835468
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -12,24 +12,24 @@ Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practi
 Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd
 Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd
 l0
-L5
+L7
 VzlWezCnMSCRRQOgD641fR1
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1747778420.609000
+Z8 !s108 1748386466.925000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd|
 Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile.vhd|
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
-!s100 USaX`OSif@b_>c9]Jo8;b2
+!s100 ?GeM@PeAV`WOY0F3aVNYH3
 !i10b 1
 Abehavioral
 R1
 R2
 R3
 DEx4 work 12 registerfile 0 22 zlWezCnMSCRRQOgD641fR1
-l21
-L18
+l32
+L23
 V4a5g>iXXid57S`gDAdC[11
 R7
 32
@@ -38,7 +38,7 @@ R9
 R10
 R11
 R12
-!s100 7AfE:`dhXTDmB=dAgW_^71
+!s100 Mg;?YImbT4][6SF:1gLTM0
 !i10b 1
 Eregisterfile_tb
 Z13 w1747778406
@@ -53,7 +53,7 @@ L5
 V]5W71P=KiY8=cGYA8Iz:P0
 R7
 32
-Z16 !s108 1747778420.809000
+Z16 !s108 1748386467.105000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_tb.vhd|
 Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_tb.vhd|
 R11
@@ -68,6 +68,7 @@ DEx4 work 15 registerfile_tb 0 22 ]5W71P=KiY8=cGYA8Iz:P0
 l33
 L8
 V;afVSFKW:nH^D1_Y<K_gn1
+!s100 0G`kO?XLzz3lj4P?d`lB20
 R7
 32
 R16
@@ -75,7 +76,6 @@ R17
 R18
 R11
 R12
-!s100 0G`kO?XLzz3lj4P?d`lB20
 !i10b 1
 Eregisterfile_top
 Z19 w1746810435
@@ -92,7 +92,7 @@ V>ggo;J6C92YaLz4h@@9hA0
 R7
 32
 !i10b 1
-Z22 !s108 1747778420.943000
+Z22 !s108 1748386467.242000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_Top.vhd|
 Z24 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_5_Arquitecture/RegisterFile_Top.vhd|
 R11

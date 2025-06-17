@@ -1,0 +1,299 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\control_unit
+Ealu
+Z0 w1750185541
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_6_Arquitecture
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ALU.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ALU.vhd
+l0
+L5
+V1<LR<eak0ilAbWH>Yb0Fz0
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1750185874.618000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ALU.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ALU.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 BY7G[iE1a^TiCG]N[eTQ_3
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+Z13 DEx4 work 3 alu 0 22 1<LR<eak0ilAbWH>Yb0Fz0
+l14
+L13
+VXhFXb8^gSYX`<Uh9QULf40
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 aIjWenC7hFPM3UDIK=JCg2
+!i10b 1
+Econtrolunit
+Z14 w1750185684
+R2
+R3
+R4
+Z15 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit.vhd
+Z16 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit.vhd
+l0
+L4
+VU<NF^X35A7``J>W9oAMzh2
+R7
+32
+Z17 !s108 1750185874.787000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit.vhd|
+Z19 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit.vhd|
+R11
+R12
+!s100 P46bXnY7:_eBkKgX3h8fo3
+!i10b 1
+Abehavioral
+R2
+R3
+Z20 DEx4 work 11 controlunit 0 22 U<NF^X35A7``J>W9oAMzh2
+l19
+L18
+Veo5koP_ATZ`P948fZbS720
+R7
+32
+R17
+R18
+R19
+R11
+R12
+!s100 z_?Zaj>WCA_ddND^B=SbT3
+!i10b 1
+Econtrolunit_tb
+Z21 w1750185703
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z23 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R2
+R3
+R4
+Z24 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit_TB.vhd
+Z25 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit_TB.vhd
+l0
+L6
+Vc:`XS=hYe0[l;QPM1<ek@0
+R7
+32
+Z26 !s108 1750185874.947000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit_TB.vhd|
+Z28 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/ControlUnit_TB.vhd|
+R11
+R12
+!s100 gQ9cT44RGSRjXPYY5C4hE3
+!i10b 1
+Abehavioral
+R22
+R23
+R2
+R3
+DEx4 work 14 controlunit_tb 0 22 c:`XS=hYe0[l;QPM1<ek@0
+l28
+L9
+V8TgiCW<Z<1ELQo]OgI5ja1
+R7
+32
+R26
+R27
+R28
+R11
+R12
+!s100 Pg`:Df5Kg;5R4^DWeL`Eg2
+!i10b 1
+Emux2
+Z29 w1750185500
+R2
+R3
+R4
+Z30 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/Mux2.vhd
+Z31 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/Mux2.vhd
+l0
+L4
+V<bMWa0b:G?8dKYAQGH;0F2
+R7
+32
+Z32 !s108 1750185875.115000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/Mux2.vhd|
+Z34 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/Mux2.vhd|
+R11
+R12
+!s100 o[N:YAII`n>0DUfh]HA>?2
+!i10b 1
+Abehavioral
+R2
+R3
+Z35 DEx4 work 4 mux2 0 22 <bMWa0b:G?8dKYAQGH;0F2
+l13
+L12
+VB9VEX`D1X@h?eJicXM?<43
+R7
+32
+R32
+R33
+R34
+R11
+R12
+!s100 TKXf0:W^>38HMbYSS3cb[2
+!i10b 1
+Eregisterfile
+Z36 w1750185598
+R1
+R2
+R3
+R4
+Z37 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RegisterFile.vhd
+Z38 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RegisterFile.vhd
+l0
+L5
+V5:G1Y?kDDLmCL5=emYoH71
+R7
+32
+Z39 !s108 1750185875.476000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RegisterFile.vhd|
+Z41 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RegisterFile.vhd|
+R11
+R12
+!s100 14]fWDP:Ai]K34PUJT^`N1
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+Z42 DEx4 work 12 registerfile 0 22 5:G1Y?kDDLmCL5=emYoH71
+l22
+L19
+V@;LUjVYTFHmF3gM_O81@b1
+R7
+32
+R39
+R40
+R41
+R11
+R12
+!s100 YQAl4O6I]>ijeUc9T@NX[1
+!i10b 1
+Erisc_v_adder
+Z43 w1750185477
+R2
+R3
+R4
+Z44 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder.vhd
+Z45 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder.vhd
+l0
+L4
+VeNFMhVDJVW]LHZ]AKFOHa3
+R7
+32
+Z46 !s108 1750185875.635000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder.vhd|
+Z48 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder.vhd|
+R11
+R12
+!s100 JX8=Je8d1B?@4fA@h8DhE0
+!i10b 1
+Astructural
+R13
+R35
+Z49 DEx4 work 10 signextend 0 22 Fng[Mk=XWcI0oM2?T[CLh3
+R1
+R42
+R20
+R2
+R3
+DEx4 work 12 risc_v_adder 0 22 eNFMhVDJVW]LHZ]AKFOHa3
+l22
+L15
+VK04N4FfYj7@CS:5[<e?QA3
+R7
+32
+R46
+R47
+R48
+R11
+R12
+!s100 eO4_aZV>ilNIbmWRCa1nD1
+!i10b 1
+Erisc_v_adder_tb
+Z50 w1750185629
+R2
+R3
+R4
+Z51 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder_TB.vhd
+Z52 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder_TB.vhd
+l0
+L4
+VTm35bJ@K`OCLElP]`I0eo0
+R7
+32
+Z53 !s108 1750185875.803000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder_TB.vhd|
+Z55 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/RISC_V_Adder_TB.vhd|
+R11
+R12
+!s100 zPjiRb<FD8I>6P9O^Tzgi0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 15 risc_v_adder_tb 0 22 Tm35bJ@K`OCLElP]`I0eo0
+l24
+L7
+VQKONBdY`9CZ^258Gk@fdY0
+!s100 OeWcaDfee2>XjV;d01Pie3
+R7
+32
+R53
+R54
+R55
+R11
+R12
+!i10b 1
+Esignextend
+Z56 w1750185520
+R2
+R3
+R4
+Z57 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/SignExtend.vhd
+Z58 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/SignExtend.vhd
+l0
+L4
+VFng[Mk=XWcI0oM2?T[CLh3
+!s100 kmkAGEZ;OAdX8Tf12U0^`1
+R7
+32
+!i10b 1
+Z59 !s108 1750185875.951000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/SignExtend.vhd|
+Z61 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISC_V_Adder/SignExtend.vhd|
+R11
+R12
+Abehavioral
+R2
+R3
+R49
+l12
+L11
+Z62 VM`ii=`:iN0j^kjbdRP^2z1
+Z63 !s100 CUJ_HUk^9`Jd1AEDXn?T[0
+R7
+32
+!i10b 1
+R59
+R60
+R61
+R11
+R12
