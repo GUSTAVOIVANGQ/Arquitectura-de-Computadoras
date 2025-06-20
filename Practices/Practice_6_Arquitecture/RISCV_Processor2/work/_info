@@ -1,0 +1,373 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_6_Arquitecture
+Ealu
+Z0 w1750285438
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\ivan\Documents\GitHub\Arquitectura-de-Computadoras\Practices\Practice_6_Arquitecture\RISCV_Processor2
+Z5 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd
+Z6 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd
+l0
+L11
+V:YZQ8cn@M2:kmITViLC1b1
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1750288272.239000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd|
+Z10 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 _F2ZOhP9K<^gO08NGo]On2
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 :YZQ8cn@M2:kmITViLC1b1
+l23
+L21
+VPB62fj_a7YhMGC2HAfUlX0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 7lL397jZRQ`LW5ZgoZLg`1
+!i10b 1
+Ealucontrol
+Z13 w1750285414
+R2
+R3
+R4
+Z14 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd
+Z15 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd
+l0
+L10
+Vo0kLnjXWAdjeX2`7a[E5h3
+R7
+32
+Z16 !s108 1750288272.397000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd|
+Z18 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd|
+R11
+R12
+!s100 [eWAc7PUKGY4bIj4BhT?k2
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 10 alucontrol 0 22 o0kLnjXWAdjeX2`7a[E5h3
+l20
+L19
+VZ9I>HWeGhfeGVT@`FaP4P1
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 iYF>9i6Z7j]KJ2fA3iYaZ0
+!i10b 1
+Econtrolunit
+Z19 w1750285452
+R2
+R3
+R4
+Z20 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd
+Z21 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd
+l0
+L9
+V_ZI:P4FC8_NnIE5ceXHB]3
+R7
+32
+Z22 !s108 1750288272.557000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd|
+Z24 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd|
+R11
+R12
+!s100 o5EcEBcRfY3jjB9:J>Hhi0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 11 controlunit 0 22 _ZI:P4FC8_NnIE5ceXHB]3
+l24
+L23
+V`<<UTFBbRa_59h?OJMeCi3
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 T;]jXG9jTl7A8Mo7cdnko0
+!i10b 1
+Edatamemory
+Z25 w1750285370
+R1
+R2
+R3
+R4
+Z26 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd
+Z27 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd
+l0
+L11
+VKN9dB=iOgKlQ[O?5X4Uf60
+R7
+32
+Z28 !s108 1750288272.734000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd|
+Z30 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd|
+R11
+R12
+!s100 6EXHJ1Xj^W8A9il:N[4jh2
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 10 datamemory 0 22 KN9dB=iOgKlQ[O?5X4Uf60
+l26
+L22
+V<l<Czzgg4;X7Y4dS]XUT83
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 J2Njj87>l6KS;h8FkPIPG0
+!i10b 1
+Eimmgen
+Z31 w1750285309
+R1
+R2
+R3
+R4
+Z32 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd
+Z33 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd
+l0
+L11
+VQm9g3;bn9NV]c8TPOjfAk1
+R7
+32
+Z34 !s108 1750288272.900000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd|
+Z36 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd|
+R11
+R12
+!s100 gdbZa[n4j?Z>?U`[gJ]590
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 6 immgen 0 22 Qm9g3;bn9NV]c8TPOjfAk1
+l19
+L18
+VgN35OmY24TTdkf^lkI2=j2
+R7
+32
+R34
+R35
+R36
+R11
+R12
+!s100 O`D:UlVn<?z:Lf=ME1XBJ0
+!i10b 1
+Einstructionmemory
+Z37 w1750285362
+R1
+R2
+R3
+R4
+Z38 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd
+Z39 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd
+l0
+L11
+V?6@7fSlk>]me:h^S6kkz:3
+R7
+32
+Z40 !s108 1750288273.074000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd|
+Z42 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd|
+R11
+R12
+!s100 O0`357QWa5Ul=g4I69PUU1
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 17 instructionmemory 0 22 ?6@7fSlk>]me:h^S6kkz:3
+l31
+L18
+VZD?gK=n`KlLOV_WM@4o9V1
+R7
+32
+R40
+R41
+R42
+R11
+R12
+!s100 YnA7ELKz?J6IU2=GgmR_e2
+!i10b 1
+Eregisterfile_32bit
+Z43 w1750285280
+R1
+R2
+R3
+R4
+Z44 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd
+Z45 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd
+l0
+L11
+VO0>CL7[P>4[D?jzc83fZS3
+R7
+32
+Z46 !s108 1750288273.248000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd|
+Z48 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd|
+R11
+R12
+!s100 >:5Hab9N3D?BHD7@Y7@0M0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 18 registerfile_32bit 0 22 O0>CL7[P>4[D?jzc83fZS3
+l28
+L24
+V8B7KW<EVk@LdL60zI^zMI1
+R7
+32
+R46
+R47
+R48
+R11
+R12
+!s100 zF]>718mnhAiI=@gK^Y@D2
+!i10b 1
+Eriscv_enhanced_tb
+Z49 w1750287789
+Z50 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R1
+R2
+R3
+R4
+Z51 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd
+Z52 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd
+l0
+L8
+VDhFHkd?ji2^SiZZ[SIXNF1
+!s100 TozO99o=Qlo`La722:b;51
+R7
+32
+!i10b 1
+Z53 !s108 1750288273.750000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd|
+Z55 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd|
+R11
+R12
+Abehavioral
+R50
+R1
+R2
+R3
+Z56 DEx4 work 17 riscv_enhanced_tb 0 22 DhFHkd?ji2^SiZZ[SIXNF1
+l80
+L11
+Z57 VHUkceiFVS0zNBBMl?[@0W2
+Z58 !s100 E7<?E7o7oJk0PQ2>>XlAi1
+R7
+32
+!i10b 1
+R53
+R54
+R55
+R11
+R12
+Eriscv_processor
+Z59 w1750285232
+R1
+R2
+R3
+R4
+Z60 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd
+Z61 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd
+l0
+L5
+VlBfN2>knJ5;S3^LC?fKj<3
+R7
+32
+Z62 !s108 1750288273.409000
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd|
+Z64 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd|
+R11
+R12
+!s100 @hG5FH4Xa5e7;2FSFdN]i0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 15 riscv_processor 0 22 lBfN2>knJ5;S3^LC?fKj<3
+l102
+L12
+VGRhaflWkB9DekdVjEV?Vo0
+R7
+32
+R62
+R63
+R64
+R11
+R12
+!s100 aal7S]BRXbWC:7z?cmm2U2
+!i10b 1
+Eriscv_processor_tb
+Z65 w1750288261
+R1
+R2
+R3
+R4
+Z66 8C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd
+Z67 FC:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd
+l0
+L6
+V?ES=i[<YU?NF08^8W>eoY1
+R7
+32
+Z68 !s108 1750288273.573000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd|
+Z70 !s107 C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd|
+R11
+R12
+!s100 ^nfDoGF@`EPl9oak@N69V0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+DEx4 work 18 riscv_processor_tb 0 22 ?ES=i[<YU?NF08^8W>eoY1
+l25
+L9
+V<mG1PZhTA:Mf]H@1<A^N70
+!s100 f_65n@]:@JFIOHR2T6RK91
+R7
+32
+R68
+R69
+R70
+R11
+R12
+!i10b 1
