@@ -43,6 +43,61 @@ PC → Instruction Memory → Control Unit → Register File → ALU → Write B
                          Signals
 ```
 ![alt text](image.png)
+
+### Simulación
+
+![alt text](<Captura de pantalla 2025-06-20 081357.png>)
+
+## Decodificación de Instrucciones
+
+### Proceso de Decodificación
+La decodificación de instrucciones sigue un proceso de dos niveles que convierte el código máquina en señales de control específicas:
+
+**Nivel 1 - Control Unit (Decodificación Principal):**
+- Entrada: Opcode (bits [6:0] de la instrucción)
+- Salida: Señales de control generales (RegWrite, ALUSrc, ALUOP, etc.)
+
+**Nivel 2 - ALU Control (Decodificación Específica):**
+- Entrada: ALUOP + funct3 + funct7
+- Salida: Código específico para la operación ALU (ALUCtrl)
+
+### Ejemplo Práctico: Decodificación de `addi x1, x0, 5`
+
+```
+Instrucción en binario: 00000000010100000000000010010011
+Instrucción en hex:     0x00500093
+```
+
+**Paso 1 - Extracción de campos:**
+```
+[31:20] = 000000000101 → Inmediato = 5
+[19:15] = 00000        → rs1 = x0
+[14:12] = 000          → funct3 = 000
+[11:7]  = 00001        → rd = x1
+[6:0]   = 0010011      → opcode = 0010011 (I-type)
+```
+
+**Paso 2 - Control Unit decodifica opcode `0010011`:**
+```vhdl
+when "0010011" => -- I-type (ADDI)
+    RegWrite <= '1';  -- Escribir resultado en x1
+    ALUSrc   <= '1';  -- Usar inmediato (5) como segundo operando
+    MemRead  <= '0';  -- No leer memoria
+    MemWrite <= '0';  -- No escribir memoria
+    MemToReg <= '0';  -- Escribir resultado de ALU en registro
+    Branch   <= '0';  -- No es salto
+    Jump     <= '0';  -- No es salto
+    ALUOP    <= "00"; -- Operación de suma simple
+```
+
+**Paso 3 - ALU Control decodifica ALUOP `00`:**
+```vhdl
+when "00" => -- Instrucciones I-type
+    ALUCtrl <= "0010"; -- Código específico para suma
+```
+
+**Resultado:** La instrucción `addi x1, x0, 5` se ejecuta sumando el contenido de x0 (que siempre es 0) con el inmediato 5, almacenando el resultado (5) en el registro x1.
+
 ## Instrucciones Soportadas
 
 ### Instrucciones Tipo R (Registro-Registro)

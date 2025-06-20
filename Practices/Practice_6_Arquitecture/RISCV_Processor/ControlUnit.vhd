@@ -36,7 +36,7 @@ begin
         Jump     <= '0';
         ALUOP    <= "00";
         
-        case opcode is
+case opcode is
             -- R-type (ADD, SUB, etc.) - opcode: 0110011
             when "0110011" =>
                 RegWrite <= '1'; -- Escribir resultado en rd
@@ -58,6 +58,72 @@ begin
                 Branch   <= '0'; -- No es salto
                 Jump     <= '0'; -- No es salto
                 ALUOP    <= "00"; -- Operación de suma simple
+                
+            -- Load (lw) - opcode: 0000011
+            when "0000011" =>
+                RegWrite <= '1'; -- Escribir dato cargado en rd
+                ALUSrc   <= '1'; -- Usar inmediato para calcular dirección
+                MemRead  <= '1'; -- Habilitar lectura de memoria
+                MemWrite <= '0'; -- No escribir memoria
+                MemToReg <= '1'; -- Escribir dato de memoria en registro
+                Branch   <= '0'; -- No es salto
+                Jump     <= '0'; -- No es salto
+                ALUOP    <= "00"; -- Suma para calcular dirección (base + offset)
+                
+            -- Store (sw) - opcode: 0100011
+            when "0100011" =>
+                RegWrite <= '0'; -- No escribir en registro
+                ALUSrc   <= '1'; -- Usar inmediato para calcular dirección
+                MemRead  <= '0'; -- No leer memoria
+                MemWrite <= '1'; -- Habilitar escritura en memoria
+                MemToReg <= '0'; -- No aplica (no se escribe en registro)
+                Branch   <= '0'; -- No es salto
+                Jump     <= '0'; -- No es salto
+                ALUOP    <= "00"; -- Suma para calcular dirección (base + offset)
+                
+            -- Branch (beq) - opcode: 1100011
+            when "1100011" =>
+                RegWrite <= '0'; -- No escribir en registro
+                ALUSrc   <= '0'; -- Usar rs2 para comparación
+                MemRead  <= '0'; -- No leer memoria
+                MemWrite <= '0'; -- No escribir memoria
+                MemToReg <= '0'; -- No aplica (no se escribe en registro)
+                Branch   <= '1'; -- Es instrucción de salto condicional
+                Jump     <= '0'; -- No es salto incondicional
+                ALUOP    <= "01"; -- Operación de comparación (resta para beq)
+                
+            -- JAL (Jump and Link) - opcode: 1101111
+            when "1101111" =>
+                RegWrite <= '1'; -- Escribir PC+4 en rd
+                ALUSrc   <= '0'; -- No aplica para cálculo de dirección
+                MemRead  <= '0'; -- No leer memoria
+                MemWrite <= '0'; -- No escribir memoria
+                MemToReg <= '0'; -- Escribir PC+4 (no resultado de ALU ni memoria)
+                Branch   <= '0'; -- No es salto condicional
+                Jump     <= '1'; -- Es salto incondicional
+                ALUOP    <= "00"; -- Operación simple (puede necesitar ajuste)
+                
+            -- JALR (Jump and Link Register) - opcode: 1100111
+            when "1100111" =>
+                RegWrite <= '1'; -- Escribir PC+4 en rd
+                ALUSrc   <= '1'; -- Usar inmediato para calcular dirección destino
+                MemRead  <= '0'; -- No leer memoria
+                MemWrite <= '0'; -- No escribir memoria
+                MemToReg <= '0'; -- Escribir PC+4 (no resultado de ALU ni memoria)
+                Branch   <= '0'; -- No es salto condicional
+                Jump     <= '1'; -- Es salto incondicional
+                ALUOP    <= "00"; -- Suma para calcular dirección (rs1 + inmediato)
+                
+            -- LUI (Load Upper Immediate) - opcode: 0110111
+            when "0110111" =>
+                RegWrite <= '1'; -- Escribir inmediato en rd
+                ALUSrc   <= '1'; -- Usar inmediato como operando
+                MemRead  <= '0'; -- No leer memoria
+                MemWrite <= '0'; -- No escribir memoria
+                MemToReg <= '0'; -- Escribir resultado de ALU en registro
+                Branch   <= '0'; -- No es salto
+                Jump     <= '0'; -- No es salto
+                ALUOP    <= "00"; -- Operación simple (puede requerir código específico)
                 
             when others =>
                 -- Mantener valores por defecto para opcodes no implementados

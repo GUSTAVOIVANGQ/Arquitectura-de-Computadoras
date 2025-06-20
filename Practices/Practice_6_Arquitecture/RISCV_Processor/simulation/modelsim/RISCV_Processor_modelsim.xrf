@@ -8,6 +8,7 @@ source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Pra
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd
+source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/db/RISCV_Processor.cbx.xml
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
