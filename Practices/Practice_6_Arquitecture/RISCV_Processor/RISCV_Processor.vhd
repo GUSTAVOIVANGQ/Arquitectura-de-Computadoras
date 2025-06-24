@@ -1,18 +1,8 @@
 -- ===============================
--- PROCESADOR RISC-V MONOCICLO
+-- PROCESADOR RISC-V MONOCICLO - VERSIÓN COMPLETA CON LOAD/STORE
 -- Descripción: Módulo principal que integra todos los componentes del procesador RISC-V
--- monociclo. Implementa la ruta de datos completa desde la búsqueda de instrucciones
--- hasta la escritura de resultados. Cada instrucción se ejecuta en un solo ciclo de reloj.
--- 
--- RUTA DE DATOS IMPLEMENTADA:
--- 1. FETCH: PC → Instruction Memory → Instruction
--- 2. DECODE: Instruction → Control Unit → Control Signals
---            Instruction → Register File → Operands
---            Instruction → Immediate Generator → Immediate Value
--- 3. EXECUTE: Operands → ALU → Result
--- 4. WRITEBACK: ALU Result → Register File (Write Data)
---
--- El procesador soporta instrucciones R-type (ADD) e I-type (ADDI) con operaciones de suma.
+-- monociclo con soporte completo para instrucciones load/store, branch y jump.
+-- Implementa la ruta de datos completa y manejo de hazards básicos.
 -- ===============================
 
 library IEEE;
@@ -29,12 +19,8 @@ end RISCV_Processor;
 architecture Behavioral of RISCV_Processor is
     -- ===============================
     -- DECLARACIÓN DE COMPONENTES
-    -- Cada componente representa una etapa o función específica en la ruta de datos
     -- ===============================
     
-    -- COMPONENTE 1: UNIDAD DE CONTROL
-    -- Ubicación en ruta de datos: DECODE
-    -- Función: Decodifica el opcode y genera todas las señales de control necesarias
     component ControlUnit
         Port (
             opcode    : in  STD_LOGIC_VECTOR(6 downto 0);
@@ -49,9 +35,6 @@ architecture Behavioral of RISCV_Processor is
         );
     end component;
     
-    -- COMPONENTE 2: UNIDAD ARITMÉTICO-LÓGICA (ALU)
-    -- Ubicación en ruta de datos: EXECUTE
-    -- Función: Realiza operaciones aritméticas y lógicas entre dos operandos
     component ALU
         Port (
             A        : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -62,9 +45,6 @@ architecture Behavioral of RISCV_Processor is
         );
     end component;
     
-    -- COMPONENTE 3: CONTROL DE ALU
-    -- Ubicación en ruta de datos: DECODE/EXECUTE
-    -- Función: Decodifica ALUOP + funct3 + funct7 para generar señal específica de ALU
     component ALUControl
         Port (
             ALUOP    : in  STD_LOGIC_VECTOR(1 downto 0);
@@ -74,9 +54,6 @@ architecture Behavioral of RISCV_Processor is
         );
     end component;
     
-    -- COMPONENTE 4: MEMORIA DE INSTRUCCIONES
-    -- Ubicación en ruta de datos: FETCH
-    -- Función: Almacena las instrucciones del programa y las entrega según el PC
     component InstructionMemory
         Port (
             addr : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -84,9 +61,6 @@ architecture Behavioral of RISCV_Processor is
         );
     end component;
     
-    -- COMPONENTE 5: MEMORIA DE DATOS
-    -- Ubicación en ruta de datos: MEMORY ACCESS (no usado en esta versión)
-    -- Función: Almacena datos para instrucciones load/store (futuras expansiones)
     component DataMemory
         Port (
             clk      : in  STD_LOGIC;
@@ -94,13 +68,11 @@ architecture Behavioral of RISCV_Processor is
             wr_data  : in  STD_LOGIC_VECTOR(31 downto 0);
             MemRead  : in  STD_LOGIC;
             MemWrite : in  STD_LOGIC;
+            funct3   : in  STD_LOGIC_VECTOR(2 downto 0);
             rd_data  : out STD_LOGIC_VECTOR(31 downto 0)
         );
     end component;
     
-    -- COMPONENTE 6: GENERADOR DE INMEDIATOS
-    -- Ubicación en ruta de datos: DECODE
-    -- Función: Extrae y extiende con signo los valores inmediatos de las instrucciones
     component ImmGen
         Port (
             inst : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -108,9 +80,6 @@ architecture Behavioral of RISCV_Processor is
         );
     end component;
     
-    -- COMPONENTE 7: ARCHIVO DE REGISTROS
-    -- Ubicación en ruta de datos: DECODE (lectura) y WRITEBACK (escritura)
-    -- Función: Banco de 32 registros que proporciona operandos y almacena resultados
     component RegisterFile_32bit
         Port (
             clk      : in  std_logic;
@@ -126,175 +95,165 @@ architecture Behavioral of RISCV_Processor is
     
     -- ===============================
     -- SEÑALES DE LA RUTA DE DATOS
-    -- Conectan los diferentes componentes siguiendo el flujo de datos
     -- ===============================
     
-    -- ETAPA FETCH: Señales del Program Counter y búsqueda de instrucciones
-    signal PC : STD_LOGIC_VECTOR(31 downto 0) := x"00000000";        -- Program Counter actual
-    signal PC_next : STD_LOGIC_VECTOR(31 downto 0);                  -- Siguiente valor del PC
-    signal instruction : STD_LOGIC_VECTOR(31 downto 0);              -- Instrucción actual
+    -- Program Counter y control de flujo
+    signal PC : STD_LOGIC_VECTOR(31 downto 0) := x"00000000";
+    signal PC_next : STD_LOGIC_VECTOR(31 downto 0);
+    signal PC_plus4 : STD_LOGIC_VECTOR(31 downto 0);
+    signal PC_branch : STD_LOGIC_VECTOR(31 downto 0);
+    signal PC_jump : STD_LOGIC_VECTOR(31 downto 0);
+    signal PCSrc : STD_LOGIC;
     
-    -- ETAPA DECODE: Señales de decodificación y lectura de operandos
-    signal immediate : STD_LOGIC_VECTOR(31 downto 0);                -- Valor inmediato extendido
-    signal reg_data1, reg_data2 : STD_LOGIC_VECTOR(31 downto 0);     -- Datos leídos de registros
+    -- Instrucción y campos
+    signal instruction : STD_LOGIC_VECTOR(31 downto 0);
+    signal opcode : STD_LOGIC_VECTOR(6 downto 0);
+    signal funct3 : STD_LOGIC_VECTOR(2 downto 0);
+    signal funct7 : STD_LOGIC_VECTOR(6 downto 0);
     
-    -- ETAPA EXECUTE: Señales de ejecución en la ALU
-    signal alu_input2 : STD_LOGIC_VECTOR(31 downto 0);               -- Segundo operando de ALU (MUX)
-    signal alu_result : STD_LOGIC_VECTOR(31 downto 0);               -- Resultado de la ALU
-    signal alu_ctrl : STD_LOGIC_VECTOR(3 downto 0);                  -- Control específico de ALU
+    -- Registros y datos
+    signal immediate : STD_LOGIC_VECTOR(31 downto 0);
+    signal reg_data1, reg_data2 : STD_LOGIC_VECTOR(31 downto 0);
+    signal write_data : STD_LOGIC_VECTOR(31 downto 0);
     
-    -- ETAPA MEMORY: Señales de acceso a memoria (no usado en esta versión)
-    signal mem_data : STD_LOGIC_VECTOR(31 downto 0);                 -- Dato leído de memoria
+    -- ALU
+    signal alu_input2 : STD_LOGIC_VECTOR(31 downto 0);
+    signal alu_result : STD_LOGIC_VECTOR(31 downto 0);
+    signal alu_ctrl : STD_LOGIC_VECTOR(3 downto 0);
+    signal zero : STD_LOGIC;
     
-    -- ETAPA WRITEBACK: Señales de escritura de resultados
-    signal write_data : STD_LOGIC_VECTOR(31 downto 0);               -- Dato a escribir en registro
+    -- Memoria
+    signal mem_data : STD_LOGIC_VECTOR(31 downto 0);
     
-    -- SEÑALES DE CONTROL: Generadas por la unidad de control
+    -- Señales de control
     signal RegWrite, ALUSrc, MemRead, MemWrite, MemToReg, Branch, Jump : STD_LOGIC;
     signal ALUOP : STD_LOGIC_VECTOR(1 downto 0);
-    signal Zero : STD_LOGIC;                                          -- Bandera Zero de la ALU
+    
+    -- Señales auxiliares
+    signal branch_taken : STD_LOGIC;
     
 begin
     -- ===============================
-    -- ETAPA 1: FETCH (BÚSQUEDA DE INSTRUCCIONES)
-    -- Actualización del Program Counter y búsqueda de la siguiente instrucción
+    -- EXTRACCIÓN DE CAMPOS DE INSTRUCCIÓN
+    -- ===============================
+    opcode <= instruction(6 downto 0);
+    funct3 <= instruction(14 downto 12);
+    funct7 <= instruction(31 downto 25);
+    
+    -- ===============================
+    -- PROGRAM COUNTER Y CONTROL DE FLUJO
     -- ===============================
     
-    -- PROGRAM COUNTER: Registro que mantiene la dirección de la instrucción actual
-    -- Se incrementa en 4 cada ciclo (direcciones de palabra en RISC-V)
+    -- Registro del Program Counter
     process(clk, reset)
     begin
         if reset = '1' then
-            PC <= x"00000000";  -- Inicializar PC en dirección 0
+            PC <= x"00000000";
         elsif rising_edge(clk) then
-            PC <= PC_next;      -- Cargar siguiente dirección
+            PC <= PC_next;
         end if;
     end process;
     
-    -- CÁLCULO DE PRÓXIMO PC: En este diseño básico siempre PC + 4
-    -- (Sin saltos implementados en esta versión)
-    PC_next <= std_logic_vector(unsigned(PC) + 4);
+    -- Cálculo de direcciones
+    PC_plus4 <= std_logic_vector(unsigned(PC) + 4);
+    PC_branch <= std_logic_vector(signed(PC) + signed(immediate));
+    PC_jump <= std_logic_vector(signed(PC) + signed(immediate));
+    
+    -- Lógica de salto
+    branch_taken <= Branch and zero when funct3 = "000" else  -- BEQ
+                    Branch and not zero when funct3 = "001" else  -- BNE
+                    '0';
+    
+    PCSrc <= branch_taken or Jump;
+    
+    -- Selección del próximo PC
+    PC_next <= PC_branch when branch_taken = '1' else
+               PC_jump when Jump = '1' else
+               PC_plus4;
     
     -- ===============================
-    -- INSTANCIACIÓN DE COMPONENTES EN ORDEN DE RUTA DE DATOS
+    -- INSTANCIACIÓN DE COMPONENTES
     -- ===============================
     
-    -- MEMORIA DE INSTRUCCIONES (FETCH)
-    -- Entrada: PC (dirección)
-    -- Salida: instruction (instrucción de 32 bits)
-    -- Función: Busca la instrucción en la dirección indicada por PC
+    -- Memoria de instrucciones
     U_IMEM: InstructionMemory
         port map (
-            addr => PC,                    -- Dirección desde PC
-            inst => instruction            -- Instrucción obtenida
+            addr => PC,
+            inst => instruction
         );
     
-    -- UNIDAD DE CONTROL (DECODE)
-    -- Entrada: opcode (bits 6:0 de la instrucción)
-    -- Salidas: Todas las señales de control
-    -- Función: Decodifica el tipo de instrucción y activa las rutas de datos apropiadas
+    -- Unidad de control
     U_CONTROL: ControlUnit
         port map (
-            opcode   => instruction(6 downto 0),    -- Opcode de la instrucción
-            RegWrite => RegWrite,                   -- Habilitar escritura en registro
-            ALUSrc   => ALUSrc,                     -- Seleccionar fuente de ALU
-            MemRead  => MemRead,                    -- Habilitar lectura de memoria
-            MemWrite => MemWrite,                   -- Habilitar escritura de memoria
-            MemToReg => MemToReg,                   -- Seleccionar fuente de write-back
-            Branch   => Branch,                     -- Señal de branch
-            Jump     => Jump,                       -- Señal de jump
-            ALUOP    => ALUOP                       -- Tipo de operación ALU
+            opcode   => opcode,
+            RegWrite => RegWrite,
+            ALUSrc   => ALUSrc,
+            MemRead  => MemRead,
+            MemWrite => MemWrite,
+            MemToReg => MemToReg,
+            Branch   => Branch,
+            Jump     => Jump,
+            ALUOP    => ALUOP
         );
-    
-    -- ARCHIVO DE REGISTROS (DECODE para lectura, WRITEBACK para escritura)
-    -- Entradas: direcciones rs1, rs2, rd y dato a escribir
-    -- Salidas: datos de rs1 y rs2
-    -- Función: Proporciona operandos y almacena resultados
+      -- Archivo de registros  
     U_REGFILE: RegisterFile_32bit
         port map (
-            clk      => clk,                        -- Reloj para escritura síncrona
-            we       => RegWrite,                   -- Habilitación de escritura (de Control Unit)
-            wr_addr  => instruction(11 downto 7),   -- rd: registro destino
-            rd_addr1 => instruction(19 downto 15),  -- rs1: primer operando
-            rd_addr2 => instruction(24 downto 20),  -- rs2: segundo operando
-            wr_data  => write_data,                 -- Dato a escribir (de MUX final)
-            rd_data1 => reg_data1,                  -- Primer operando leído
-            rd_data2 => reg_data2                   -- Segundo operando leído
+            clk      => clk,
+            we       => RegWrite,
+            wr_addr  => instruction(11 downto 7),  -- rd
+            rd_addr1 => instruction(19 downto 15), -- rs1
+            rd_addr2 => instruction(24 downto 20), -- rs2
+            wr_data  => write_data,
+            rd_data1 => reg_data1,
+            rd_data2 => reg_data2
         );
     
-    -- GENERADOR DE INMEDIATOS (DECODE)
-    -- Entrada: instrucción completa
-    -- Salida: valor inmediato extendido a 32 bits
-    -- Función: Extrae inmediatos según el tipo de instrucción y los extiende con signo
+    -- Generador de inmediatos
     U_IMMGEN: ImmGen
         port map (
-            inst => instruction,                    -- Instrucción completa
-            imm  => immediate                       -- Inmediato extendido
+            inst => instruction,
+            imm  => immediate
         );
     
-    -- CONTROL DE ALU (DECODE/EXECUTE)
-    -- Entradas: ALUOP, funct3, funct7
-    -- Salida: código específico de operación ALU
-    -- Función: Decodifica la operación específica que debe realizar la ALU
+    -- Control de ALU
     U_ALUCONTROL: ALUControl
         port map (
-            ALUOP   => ALUOP,                       -- Código general de ALU (de Control Unit)
-            funct7  => instruction(31 downto 25),   -- Campo funct7 de la instrucción
-            funct3  => instruction(14 downto 12),   -- Campo funct3 de la instrucción
-            ALUCtrl => alu_ctrl                     -- Código específico para ALU
+            ALUOP   => ALUOP,
+            funct7  => funct7,
+            funct3  => funct3,
+            ALUCtrl => alu_ctrl
         );
     
-    -- UNIDAD ARITMÉTICO-LÓGICA (EXECUTE)
-    -- Entradas: dos operandos de 32 bits y código de control
-    -- Salidas: resultado y bandera Zero
-    -- Función: Realiza la operación aritmética/lógica especificada
+    -- ALU
     U_ALU: ALU
         port map (
-            A       => reg_data1,                   -- Primer operando (siempre rs1)
-            B       => alu_input2,                  -- Segundo operando (rs2 o inmediato)
-            ALUCtrl => alu_ctrl,                    -- Código de operación específica
-            Result  => alu_result,                  -- Resultado de la operación
-            Zero    => Zero                         -- Bandera: '1' si resultado es cero
+            A       => reg_data1,
+            B       => alu_input2,
+            ALUCtrl => alu_ctrl,
+            Result  => alu_result,
+            Zero    => zero
         );
     
-    -- MEMORIA DE DATOS (MEMORY ACCESS)
-    -- Aunque no se usa en esta versión, está instanciada para futuras expansiones
-    -- Función: Maneja operaciones load/store cuando se implementen
+    -- Memoria de datos
     U_DMEM: DataMemory
         port map (
-            clk      => clk,                        -- Reloj para escritura síncrona
-            addr     => alu_result,                 -- Dirección (resultado de ALU)
-            wr_data  => reg_data2,                  -- Dato a escribir (rs2)
-            MemRead  => MemRead,                    -- Habilitación de lectura
-            MemWrite => MemWrite,                   -- Habilitación de escritura
-            rd_data  => mem_data                    -- Dato leído
+            clk      => clk,
+            addr     => alu_result,
+            wr_data  => reg_data2,
+            MemRead  => MemRead,
+            MemWrite => MemWrite,
+            funct3   => funct3,
+            rd_data  => mem_data
         );
     
     -- ===============================
     -- MULTIPLEXORES DE LA RUTA DE DATOS
-    -- Implementan las decisiones de enrutamiento basadas en señales de control
     -- ===============================
     
-    -- MUX 1: SELECCIÓN DE SEGUNDO OPERANDO DE ALU (EXECUTE)
-    -- Controla: ALUSrc (de Control Unit)
-    -- Función: Selecciona entre rs2 (instrucciones R-type) o inmediato (instrucciones I-type)
+    -- Multiplexor para entrada B de la ALU (rs2 o inmediato)
     alu_input2 <= immediate when ALUSrc = '1' else reg_data2;
     
-    -- MUX 2: SELECCIÓN DE DATO PARA WRITE-BACK (WRITEBACK)
-    -- Controla: MemToReg (de Control Unit)
-    -- Función: Selecciona entre resultado de ALU o dato de memoria como fuente de escritura
-    -- En esta versión siempre usa ALU ya que no hay instrucciones load implementadas
+    -- Multiplexor para dato a escribir en registro (resultado ALU o memoria)
     write_data <= mem_data when MemToReg = '1' else alu_result;
-    
-    -- ===============================
-    -- RESUMEN DE FLUJO DE DATOS:
-    -- 1. PC → Instruction Memory → Instruction
-    -- 2. Instruction[6:0] → Control Unit → Control Signals
-    -- 3. Instruction → Register File → reg_data1, reg_data2
-    -- 4. Instruction → ImmGen → immediate
-    -- 5. reg_data1 + (reg_data2 OR immediate) → ALU → alu_result
-    -- 6. alu_result → Register File (write_data)
-    -- 7. PC = PC + 4 (próximo ciclo)
-    -- ===============================
-    
+
 end Behavioral;

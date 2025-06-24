@@ -119,7 +119,14 @@ addi x1, x0, 5     # x1 = 0 + 5 = 5
 addi x2, x0, 3     # x2 = 0 + 3 = 3
 add  x3, x1, x2    # x3 = x1 + x2 = 8
 addi x4, x3, 4     # x4 = x3 + 4 = 12
+sw   x1, 0(x0)     # Almacenar x1 (valor 5) en memoria dirección 0
+lw   x5, 0(x0)     # Cargar x5 desde memoria dirección 0 (x5 = 5)
 ```
+
+### Resultados Esperados:
+- **Registros**: x1 = 5, x2 = 3, x3 = 8, x4 = 12, x5 = 5
+- **Memoria**: dirección 0 contiene el valor 5
+- **Verificación Load/Store**: x5 debe contener el mismo valor que x1 (5)
 
 ## Archivos del Proyecto
 

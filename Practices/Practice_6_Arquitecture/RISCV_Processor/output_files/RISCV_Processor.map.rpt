@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISCV_Processor
-Fri Jun 20 11:07:31 2025
+Tue Jun 24 16:24:14 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,10 +14,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "ALU:U_ALU"
- 10. Port Connectivity Checks: "ControlUnit:U_CONTROL"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -43,7 +41,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 20 11:07:31 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 24 16:24:14 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RISCV_Processor                            ;
 ; Top-level Entity Name              ; RISCV_Processor                            ;
@@ -228,25 +226,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:U_ALU"                                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:U_CONTROL"                                                                ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; branch ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jump   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -262,7 +241,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jun 20 11:07:28 2025
+    Info: Processing started: Tue Jun 24 16:24:10 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISCV_Processor -c RISCV_Processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file riscv_processor.vhd
@@ -296,9 +275,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file riscv_e
     Info (12022): Found design unit 1: RISCV_Enhanced_TB-Behavioral
     Info (12023): Found entity 1: RISCV_Enhanced_TB
 Info (12127): Elaborating entity "RISCV_Processor" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at RISCV_Processor.vhd(153): object "Branch" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at RISCV_Processor.vhd(153): object "Jump" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at RISCV_Processor.vhd(155): object "Zero" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at RISCV_Processor.vhd(106): object "PCSrc" assigned a value but never read
 Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:U_IMEM"
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:U_CONTROL"
 Info (12128): Elaborating entity "RegisterFile_32bit" for hierarchy "RegisterFile_32bit:U_REGFILE"
@@ -306,6 +283,7 @@ Info (12128): Elaborating entity "ImmGen" for hierarchy "ImmGen:U_IMMGEN"
 Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:U_ALUCONTROL"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:U_ALU"
 Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:U_DMEM"
+Warning (10492): VHDL Process Statement warning at DataMemory.vhd(89): signal "word_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -314,10 +292,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4671 megabytes
-    Info: Processing ended: Fri Jun 20 11:07:31 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Tue Jun 24 16:24:14 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

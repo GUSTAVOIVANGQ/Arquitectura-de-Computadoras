@@ -1,19 +1,11 @@
-C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity ALUControl
--- Compiling architecture Behavioral of ALUControl
-
-} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd
+C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity DataMemory
--- Compiling architecture Behavioral of DataMemory
+-- Compiling entity RISCV_Processor_TB
+-- Compiling architecture Behavioral of RISCV_Processor_TB
 
 } {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/InstructionMemory.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -24,14 +16,22 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity InstructionMemory
 -- Compiling architecture Behavioral of InstructionMemory
 
-} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor_TB.vhd
+} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/DataMemory.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity RISCV_Processor_TB
--- Compiling architecture Behavioral of RISCV_Processor_TB
+-- Compiling entity DataMemory
+-- Compiling architecture Behavioral of DataMemory
+
+} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALUControl.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALUControl
+-- Compiling architecture Behavioral of ALUControl
 
 } {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -41,15 +41,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity RegisterFile_32bit
 -- Compiling architecture Behavioral of RegisterFile_32bit
-
-} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ImmGen
--- Compiling architecture Behavioral of ImmGen
 
 } {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Enhanced_TB.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -61,14 +52,22 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity RISCV_Enhanced_TB
 -- Compiling architecture Behavioral of RISCV_Enhanced_TB
 
-} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd
+} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ImmGen.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity ALU
--- Compiling architecture Behavioral of ALU
+-- Compiling entity ImmGen
+-- Compiling architecture Behavioral of ImmGen
+
+} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ControlUnit
+-- Compiling architecture Behavioral of ControlUnit
 
 } {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -78,5 +77,14 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity RISCV_Processor
 -- Compiling architecture Behavioral of RISCV_Processor
+
+} {} {}} C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd {1 {vcom -work work -2002 -explicit C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ALU.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture Behavioral of ALU
 
 } {} {}}

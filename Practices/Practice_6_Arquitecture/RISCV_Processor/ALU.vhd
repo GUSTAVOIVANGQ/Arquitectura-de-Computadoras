@@ -1,8 +1,8 @@
 -- ===============================
--- ALU (Unidad Aritmético-Lógica)
+-- ALU (Unidad Aritmético-Lógica) - VERSIÓN MEJORADA
 -- Descripción: Realiza operaciones aritméticas y lógicas entre dos operandos de 32 bits.
--- Por ahora solo implementa la suma, pero está diseñada para expandirse fácilmente.
--- Genera una bandera Zero para instrucciones de salto condicional.
+-- Implementa suma, resta, y operaciones lógicas necesarias para RISC-V.
+-- Incluye soporte para cálculo de direcciones en load/store y comparaciones para branch.
 -- ===============================
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -27,6 +27,29 @@ begin
         case ALUCtrl is
             when "0010" => -- Operación ADD (suma)
                 alu_result <= std_logic_vector(signed(A) + signed(B));
+                
+            when "0110" => -- Operación SUB (resta) - para comparaciones BEQ
+                alu_result <= std_logic_vector(signed(A) - signed(B));
+                
+            when "0000" => -- Operación AND
+                alu_result <= A and B;
+                
+            when "0001" => -- Operación OR
+                alu_result <= A or B;
+                
+            when "0111" => -- Operación SLT (Set Less Than)
+                if signed(A) < signed(B) then
+                    alu_result <= x"00000001";
+                else
+                    alu_result <= x"00000000";
+                end if;
+                
+            when "1000" => -- Operación XOR
+                alu_result <= A xor B;
+                
+            when "1001" => -- Operación de paso directo (para LUI)
+                alu_result <= B; -- Pasa el inmediato directamente
+                
             when others => -- Operaciones no implementadas
                 alu_result <= (others => '0');
         end case;

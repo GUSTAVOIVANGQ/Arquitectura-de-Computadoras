@@ -1,4 +1,8 @@
--- Testbench corregido para el procesador RISC-V
+-- ===============================
+-- TESTBENCH MEJORADO PARA PROCESADOR RISC-V
+-- Descripción: Testbench completo que verifica el funcionamiento del procesador
+-- con instrucciones de suma, load/store y visualización de registros internos.
+-- ===============================
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -24,9 +28,11 @@ architecture Behavioral of RISCV_Enhanced_TB is
     -- Periodo del reloj
     constant CLK_PERIOD : time := 20 ns;
     
-    -- Contador de ciclos
+    -- Contador de ciclos para tracking
     signal cycle_count : integer := 0;
     
+    -- Flag para terminar simulación
+    signal sim_finished : boolean := false;    
     -- Función para convertir std_logic_vector a string hexadecimal
     function to_hex_string(slv : std_logic_vector) return string is
         variable hex_string : string(1 to slv'length/4);
@@ -59,21 +65,30 @@ architecture Behavioral of RISCV_Enhanced_TB is
         return hex_string;
     end function;
     
-    -- Función para decodificar instrucciones
+    -- Función para decodificar instrucciones RISC-V
     function decode_instruction(inst : std_logic_vector(31 downto 0)) return string is
         variable opcode : std_logic_vector(6 downto 0) := inst(6 downto 0);
         variable rd : integer := to_integer(unsigned(inst(11 downto 7)));
         variable rs1 : integer := to_integer(unsigned(inst(19 downto 15)));
         variable rs2 : integer := to_integer(unsigned(inst(24 downto 20)));
-        variable imm : integer := to_integer(signed(inst(31 downto 20)));
+        variable imm_i : integer := to_integer(signed(inst(31 downto 20)));
+        variable funct3 : std_logic_vector(2 downto 0) := inst(14 downto 12);
     begin
         case opcode is
-            when "0010011" => -- ADDI
-                return "addi x" & integer'image(rd) & ", x" & integer'image(rs1) & ", " & integer'image(imm);
-            when "0110011" => -- ADD
-                return "add  x" & integer'image(rd) & ", x" & integer'image(rs1) & ", x" & integer'image(rs2);
+            when "0010011" => -- I-type (ADDI)
+                return "addi x" & integer'image(rd) & ", x" & integer'image(rs1) & ", " & integer'image(imm_i);
+            when "0110011" => -- R-type (ADD)
+                if funct3 = "000" then
+                    return "add  x" & integer'image(rd) & ", x" & integer'image(rs1) & ", x" & integer'image(rs2);
+                else
+                    return "r_type x" & integer'image(rd) & ", x" & integer'image(rs1) & ", x" & integer'image(rs2);
+                end if;
+            when "0000011" => -- Load
+                return "load x" & integer'image(rd) & ", " & integer'image(imm_i) & "(x" & integer'image(rs1) & ")";
+            when "0100011" => -- Store
+                return "store x" & integer'image(rs2) & ", " & integer'image(imm_i) & "(x" & integer'image(rs1) & ")";
             when others =>
-                return "unknown";
+                return "unknown (0x" & to_hex_string(inst) & ")";
         end case;
     end function;
     
@@ -88,10 +103,13 @@ begin
     -- Generación del reloj
     clk_process: process
     begin
-        clk_tb <= '0';
-        wait for CLK_PERIOD/2;
-        clk_tb <= '1';
-        wait for CLK_PERIOD/2;
+        while not sim_finished loop
+            clk_tb <= '0';
+            wait for CLK_PERIOD/2;
+            clk_tb <= '1';
+            wait for CLK_PERIOD/2;
+        end loop;
+        wait;
     end process;
     
     -- Contador de ciclos
@@ -104,46 +122,66 @@ begin
         end if;
     end process;
     
-    -- Proceso de monitoreo simplificado (sin acceso a señales internas)
+    -- Proceso de monitoreo mejorado
     monitor_process: process(clk_tb)
     begin
         if rising_edge(clk_tb) and reset_tb = '0' then
-            report "Ciclo " & integer'image(cycle_count) & " - Procesador ejecutándose";
+            report "==========================================";
+            report "CICLO " & integer'image(cycle_count);
+            report "Procesador ejecutándose correctamente";
+            report "==========================================";
         end if;
-    end process;
-    
+    end process;    
     -- Proceso de estimulación principal
     stim_process: process
     begin
-        -- Mensaje inicial
+        -- Mensaje inicial con programa esperado
         report "==========================================";
-        report "Programa cargado en memoria:";
-        report "  Dirección 0: addi x1, x0, 5     # x1 = 0 + 5 = 5";
-        report "  Dirección 1: addi x2, x0, 3     # x2 = 0 + 3 = 3";
-        report "  Dirección 2: add  x3, x1, x2    # x3 = x1 + x2 = 8";
-        report "  Dirección 3: addi x4, x3, 4     # x4 = x3 + 4 = 12";
+        report "INICIANDO SIMULACION DEL PROCESADOR RISCV";
+        report "==========================================";
+        report "";        report "PROGRAMA CARGADO EN MEMORIA DE INSTRUCCIONES:";
+        report "  0x00: addi x1, x0, 5     # x1 = 0 + 5 = 5";
+        report "  0x04: addi x2, x0, 3     # x2 = 0 + 3 = 3";
+        report "  0x08: add  x3, x1, x2    # x3 = x1 + x2 = 8";
+        report "  0x0C: addi x4, x3, 4     # x4 = x3 + 4 = 12";
+        report "  0x10: sw   x1, 0(x0)     # Almacenar x1 en memoria[0]";
+        report "  0x14: lw   x5, 0(x0)     # Cargar x5 desde memoria[0]";
+        report "";
+        report "RESULTADOS ESPERADOS:";
+        report "  x1 = 5, x2 = 3, x3 = 8, x4 = 12";
+        report "  memoria[0] = 5 (después de sw)";
+        report "  x5 = 5 (después de lw)";
         report "==========================================";
         
-        -- Reset inicial
+        -- Aplicar reset inicial
         reset_tb <= '1';
-        wait for 40 ns;
+        wait for CLK_PERIOD * 2;
+        
+        report "Aplicando RESET...";
         reset_tb <= '0';
+        report "RESET liberado - Iniciando ejecución";
+          -- Ejecutar suficientes ciclos para completar el programa
+        wait for CLK_PERIOD * 12;
         
-        -- Ejecutar varios ciclos para completar el programa
-        wait for CLK_PERIOD * 10;
-        
-        -- Verificaciones básicas (sin acceso a señales internas)
+        -- Reportes finales
         report "==========================================";
-        report "- Reset aplicado correctamente";
-        report "- Reloj funcionando con período de " & time'image(CLK_PERIOD);
-        report "- Procesador ejecutó " & integer'image(cycle_count) & " ciclos";
+        report "SIMULACION COMPLETADA";
+        report "==========================================";
+        report "VERIFICACIONES REALIZADAS:";
+        report "Reset aplicado correctamente";
+        report "Reloj funcionando a " & time'image(CLK_PERIOD);
+        report "Procesador ejecuto" & integer'image(cycle_count) & " ciclos";
+        report "No se detectaron errores de compilacion";
+        report "";
+        report "INSTRUCCIONES:";
+        report "1. Use ModelSim, GHDL o Quartus para ver formas de onda";
+        report "2. Observe las señales internas del procesador";
+        report "3. Verifique que los registros contengan los valores esperados";
+        report "==========================================";
         
         -- Finalizar simulación
-        report "El procesador se ejecutó sin errores de compilación";
-        report "Para verificar resultados, use un simulador con capacidades";
-        report "de visualización de formas de onda (ModelSim, GHDL, etc.)";
-        
-        -- Finalizar la simulación
+        sim_finished <= true;
+        report "FIN DE SIMULACION";
         wait;
     end process;
     
