@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/program.txt
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RISCV_Processor.vhd
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/ControlUnit.vhd
 source_file = 1, C:/Users/ivan/Documents/GitHub/Arquitectura-de-Computadoras/Practices/Practice_6_Arquitecture/RISCV_Processor/RegisterFile_32bit.vhd

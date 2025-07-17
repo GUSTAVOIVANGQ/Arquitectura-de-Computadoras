@@ -1,7 +1,7 @@
 -- ===============================
--- PROCESADOR RISC-V MONOCICLO - VERSIÓN COMPLETA CON LOAD/STORE
+-- PROCESADOR RISC-V MONOCICLO - VERSIÓN COMPLETA CON LOAD/STORE y SUMA
 -- Descripción: Módulo principal que integra todos los componentes del procesador RISC-V
--- monociclo con soporte completo para instrucciones load/store, branch y jump.
+-- monociclo con soporte completo para instrucciones load/store.
 -- Implementa la ruta de datos completa y manejo de hazards básicos.
 -- ===============================
 
